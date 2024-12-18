@@ -1,0 +1,46 @@
+1. Declare a div() function with two parameters. Then call the function and pass two numbers and display their division.
+
+def div(a,b):
+    return a/b
+
+a = int(input("Enter number 1: "))
+b = int(input("Enter number 2: "))
+print(div(a,b))
+
+
+2. Declare a square() function with one parameter.Then call the function and pass one number and display the square of that number.
+
+def square(a):
+    return a*a
+
+a = int(input("Enter number: "))
+print(square(a))
+
+
+3. Using max() and min() functions display the maximum and minimum of 5 random numbers.
+
+lst = []
+
+# take 5 inputs from user
+for i in range(5):
+    lst.append(int(input("Enter number: ")))
+
+print(max(lst))
+print(min(lst))
+
+
+4. Accept a name from the user and display that in lower case using lower() function
+
+# Accept a name from the user
+name = input("Enter your name: ")
+#lower it and print
+print(name.lower())
+
+
+5. Write a lambda function that takes one argument and returns 'Positive' if the number is greater than 0, 'Negative' if it's less than 0, and 'Zero' if it's 0. Test it with different numbers.
+
+# using lambda function
+f = lambda a: "Positive" if a>0 else "Negative" if a<0 else "Zero"
+# Taking input and printing
+a = int(input("Enter number: "))
+print(f(a))
