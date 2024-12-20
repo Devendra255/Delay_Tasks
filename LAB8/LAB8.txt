@@ -1,0 +1,89 @@
+1. Write a Python program to Count all letters, digits, and special symbols from the given string
+Input = “P@#yn26at^&i5ve”
+Output: Chars = 8 Digits = 3 Symbol = 4
+
+string = input("Enter a string: ")
+if string == '':
+    string = "P@#yn26at^&i5ve"
+print('your string is:', string)
+chars = 0
+digits = 0
+symbols = 0
+for i in string:
+    if i.isalpha():
+        chars += 1
+    elif i.isdigit():
+        digits += 1
+    elif not (i.isalpha() or i.isdigit()):
+        symbols += 1
+print("Chars:", chars, end=" ")
+print("Digits:", digits, end=" ")
+print("Symbols:", symbols, end="")
+
+
+2. Write a Python program to remove duplicate characters of a given string.
+Input = “String and String Function”
+Output: String and Function
+
+# this program removes duplicate 'words' from a string
+string = input("Enter a string: ")
+if string == '':
+    string = "String and String Function"
+print('your string is:', string)
+
+words = string.lower().split()
+words_set = set(words)
+new_string = ''
+for i in words:
+    if i in words_set:
+        words_set.remove(i)
+        new_string += i
+        new_string += ' '
+print(new_string)
+
+
+3. Write a Python program to count Uppercase, Lowercase, special character and numeric values in a given string
+Input = “Hell0 W0rld ! 123 * # welcome to pYtHoN”
+Output:
+UpperCase : 5
+LowerCase : 18
+NumberCase : 5
+SpecialCase : 11
+
+string = input("Enter a string: ")
+if string == '':
+    string = "Hell0 W0rld ! 123 * # welcome to pYtHoN"
+print('your string is:', string)
+upper = 0
+lower = 0
+number = 0
+special = 0
+for i in string:
+    if i.isupper():
+        upper += 1
+    elif i.islower():
+        lower += 1
+    elif i.isdigit():
+        number += 1
+    elif not (i.isalpha() or i.isdigit()):
+        special += 1
+print("UpperCase:", upper)
+print("LowerCase:", lower)
+print("NumberCase:", number)
+print("SpecialCase:", special)
+
+
+4. Write a Python Count vowels in a string
+input= “Welcome to Python Assigement“
+
+string = input("Enter a string: ")
+if string == '':
+    string = "Welcome to Python Assigement"
+print('your string is:', string)
+
+count = 0
+for i in string:
+    if i in "aeiouAEIOU":
+        count += 1
+print("Number of vowels: ", count)
+

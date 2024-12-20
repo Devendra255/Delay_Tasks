@@ -1,6 +1,9 @@
 1. Write a Python program to count the occurrences of each word in a given sentence string = “To change the overall look of your document. To change the look available in the gallery” 
 
-string = "To change the overall look of your document. To change the look available in the gallery"
+string = input("Enter a sentence: ")
+if string == '':
+    string = "To change the overall look of your document. To change the look available in the gallery"
+print('your sentence is:', string)
 words = string.lower().split()
 words_set = set(words)
 
@@ -10,13 +13,19 @@ for word in words_set:
 
 2. Write a Python program to remove a newline in Python String = "\nBest \nDeeptech \nPython \nTraining\n" 
 
-string = "\nBest \nDeeptech \nPython \nTraining\n"
+# there is no user input because users can't add \n in terminal
+string = '\nBest \nDeeptech \nPython \nTraining\n'
 print(string.replace("\n", ""))
 
 
 3. Write a Python program to reverse words in a string String = “Deeptech Python Training” 
 
-string = "Deeptech Python Training"
+string = input("Enter a sentence: ")
+
+if string == '':
+    string = 'Deeptech Python Training'
+print('your string is:', string)
+
 # Entire string reversed
 print(string[::-1])
 
@@ -29,11 +38,19 @@ for i in words:
 print(rev)
 
 
+
 4. Write a Python program to count and display the vowels of a given text String=”Welcome to python Training”
 
-string = "Welcome to python Training"
+string = input("Enter a sentence: ")
+if string == '':
+    string = 'Welcome to python Training'
+print('your string is:', string)
+
+only_vowels = ''
 count = 0
 for i in string:
     if i in "aeiouAEIOU":
         count += 1
+        only_vowels += i
 print("Number of vowels: ", count)
+print("Vowels: ", only_vowels)
