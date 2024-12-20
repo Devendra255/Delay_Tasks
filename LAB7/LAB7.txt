@@ -1,0 +1,39 @@
+1. Write a Python program to count the occurrences of each word in a given sentence string = “To change the overall look of your document. To change the look available in the gallery” 
+
+string = "To change the overall look of your document. To change the look available in the gallery"
+words = string.lower().split()
+words_set = set(words)
+
+for word in words_set:
+    print(word, ":", words.count(word))
+
+
+2. Write a Python program to remove a newline in Python String = "\nBest \nDeeptech \nPython \nTraining\n" 
+
+string = "\nBest \nDeeptech \nPython \nTraining\n"
+print(string.replace("\n", ""))
+
+
+3. Write a Python program to reverse words in a string String = “Deeptech Python Training” 
+
+string = "Deeptech Python Training"
+# Entire string reversed
+print(string[::-1])
+
+# Only words reversed
+words = string.split()
+rev = ''
+for i in words:
+    rev += ''.join(reversed(i))
+    rev += ' '
+print(rev)
+
+
+4. Write a Python program to count and display the vowels of a given text String=”Welcome to python Training”
+
+string = "Welcome to python Training"
+count = 0
+for i in string:
+    if i in "aeiouAEIOU":
+        count += 1
+print("Number of vowels: ", count)
